@@ -1,134 +1,292 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: #e0f7fa;
-    color: #333;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Header */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+ h2, h3 {
+    color: #1d3557;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #1d3557;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 header {
-    background: #00796b;
+    background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    animation: fadeIn 2s ease-in-out;
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
 }
 
-header p {
-    margin: 5px 0;
+.header-content p {
     font-size: 1.2rem;
 }
 
 header a {
-    color: #80cbc4;
-    text-decoration: none;
+    color: #f1faee;
     font-weight: bold;
 }
 
-/* Main Sections */
-main {
-    padding: 20px;
+header a:hover {
+    color: #a8dadc;
 }
 
-h2 {
-    margin: 20px 0;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: #004d40;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 5px;
-    background: #00796b;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.fade-in {
+section {
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 2s ease-in-out;
 }
 
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    border-bottom: 3px solid #e63946;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #00796b;
+    text-align: center;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+#objective {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-left: 5px solid #e63946;
+    border-radius: 12px;
+}
+
+
+#education ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+#education li {
+    margin-bottom: 0.8rem;
+}
+
+#education li strong {
+    color: #e63946;
+}
+
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card {
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #f1faee;
+    border: 2px solid #a8dadc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: #1d3557;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin-bottom: 0.5rem;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+#technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.project-card h3 {
-    margin: 10px;
+#technologies li {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
 }
 
-.project-card p {
-    margin: 10px;
-    color: #555;
+#technologies li:hover {
+    background-color: #457b9d;
+}
+
+
+#awards ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+}
+
+
+#freelance-experience ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+#freelance-experience li strong {
+    color: #457b9d;
+}
+
+#media-collaborations ul, 
+#youtube-collaborations ul, 
+#osint-work ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+#media-collaborations li, 
+#youtube-collaborations li, 
+#osint-work li {
+    margin-bottom: 0.8rem;
+}
+
+
+#hobbies p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-left: 5px solid #457b9d;
+    border-radius: 12px;
 }
 
 
 footer {
-    background: #004d40;
-    color: white;
-    padding: 20px 0;
+    background-color: #2b2d42;
+    color: #f1faee;
     text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
 }
 
-footer .social-media {
-    margin: 10px 0;
+footer p {
+    margin-bottom: 1rem;
 }
 
-footer .social-media a {
-    color: #fff;
-    font-size: 2rem;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s;
+.social-media a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #f1faee;
+    transition: color 0.3s ease;
 }
 
-footer .social-media a:hover {
-    color: #80cbc4;
+.social-media a:hover {
+    color: #e63946;
 }
 
-@keyframes fadeIn {
+section ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+
+
+section ul li:hover {
+    transform: translateX(10px); /* Move list item on hover */
+    color: #457b9d; /* Change text color on hover */
+}
+
+section ul li:hover::before {
+    transform: scale(1.5); /* Enlarge bullet point on hover */
+}
+
+/* Optional: Add fade-in effect on list items */
+section ul li {
+    opacity: 0;
+    animation: fadeInList 0.5s ease forwards;
+    animation-delay: calc(0.1s * var(--delay)); /* Delay for each item */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInList {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
