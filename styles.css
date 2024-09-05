@@ -235,22 +235,22 @@ section ul li {
 
 
 section ul li:hover {
-    transform: translateX(10px); /* Move list item on hover */
-    color: #457b9d; /* Change text color on hover */
+    transform: translateX(10px);
+    color: #457b9d;
 }
 
 section ul li:hover::before {
-    transform: scale(1.5); /* Enlarge bullet point on hover */
+    transform: scale(1.5); 
 }
 
-/* Optional: Add fade-in effect on list items */
+
 section ul li {
     opacity: 0;
     animation: fadeInList 0.5s ease forwards;
-    animation-delay: calc(0.1s * var(--delay)); /* Delay for each item */
+    animation-delay: calc(0.1s * var(--delay)); 
 }
 
-/* Keyframes for fade-in effect */
+
 @keyframes fadeInList {
     from {
         opacity: 0;
